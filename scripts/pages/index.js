@@ -52,7 +52,7 @@ const displayData = async () => {
     photographerModel.innerHTML = photographers
       .map(
         (photographer) =>
-          `${photographer.portrait}${photographer.name}${photographer.country}${photographer.city}${photographer.tagline}${photographer.price}`
+          `${photographer.id}${photographer.portrait}${photographer.name}${photographer.country}${photographer.city}${photographer.tagline}${photographer.price}`
       )
       .join("");
   });

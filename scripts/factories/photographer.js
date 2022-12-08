@@ -5,18 +5,26 @@ function photographerFactory(data) {
 
   function getUserCardDOM() {
     const article = document.createElement("article");
+    const link = document.createElement("a");
+    link.setAttribute("href", "#");
     const img = document.createElement("img");
     img.setAttribute("src", picture);
     img.setAttribute("alt", `${portrait}`);
+
     const h2 = document.createElement("h2");
     h2.textContent = name;
     const localisation = document.createElement("p");
-    localisation.textContent = country + ", " + city;
+    localisation.classList.add("localisation");
+    localisation.textContent = city + ", " + country;
     const photographerTagline = document.createElement("p");
+    photographerTagline.classList.add("tagline");
     photographerTagline.textContent = tagline;
     const photographerPrice = document.createElement("p");
+    photographerPrice.classList.add("price");
     photographerPrice.textContent = price + "€/jour";
-    article.appendChild(img);
+    // wrap img in link as its child
+    article.appendChild(link);
+    link.append(img);
     article.appendChild(h2);
     article.appendChild(localisation);
     article.appendChild(photographerTagline);

@@ -1,4 +1,6 @@
 //Mettre le code JavaScript lié à la page photographer.html
+const contactFormTitle = document.querySelector("span");
+console.log(contactFormTitle);
 const photographContainer = document.querySelector(".photograph-header");
 
 let photographers = [];
@@ -18,7 +20,7 @@ async function photographDisplay(data) {
   //console.log(userIdParam);
   // get id param
   const urlParams = new URLSearchParams(userIdParam);
-  // console.log(urlParams);
+
   // get id value
   let idUser = urlParams.get("id");
   idUser = parseInt(idUser);
@@ -32,15 +34,25 @@ async function photographDisplay(data) {
     .filter((photographer) => photographer.id === idUser)
     .map(
       (photographer) =>
-        `<div>
-      <h2>${photographer.name}</h2>
-      <p>${photographer.country}, ${photographer.city}</p>
-      <p>${photographer.tagline}</p>
+        `<div class="photographer__info">
+    <h2 class="photographer__name">${photographer.name}</h2>
+    <p class="photographer__localisation">${photographer.country}, ${photographer.city}</p>
+    <p class="photographer__tagline">${photographer.tagline}</p>
     </div>
-    <div><a><img src="../../assets/photographers/${photographer.portrait}" alt="${photographer.name}" class=""></a></div>
+    <div class="photographer__picture align-item"><a><img src="../../assets/photographers/${photographer.portrait}" alt="${photographer.name}"></a></div>
+
     `
     )
     .join("");
+  // add firstname and lastname to contact form
+  contactFormTitle.textContent = photographers
+    .filter((photographer) => photographer.id === idUser)
+    .map(
+      (photographer) =>
+        `${photographer.name}
+  `
+    );
+
   return data;
 }
 window.addEventListener("load", getPhotographers);

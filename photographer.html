@@ -1,19 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link
       href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/fd61535574.js"
+      crossorigin="anonymous"
+    ></script>
+
     <title>Fisheye - photographe</title>
   </head>
   <body>
     <header>
-      <img src="assets/images/logo.png" class="logo" />
+      <img src="assets/images/logo.png" class="logo" alt="logo" />
     </header>
+
+    <div class="photograph__media"></div>
     <main id="main">
       <div class="photograph-header" id="head">
         <div class="wrapper__contact_button">
@@ -22,11 +30,53 @@
           </button>
         </div>
       </div>
+      <div class="dropdown__wrapper">
+        <div class="dropdown__label">Trier par</div>
+        <button class="btnSort" id="minToMax">Tri croissant</button>
+        <button class="btnSort" id="maxToMin">Popularité</button>
+        <button class="btnSort" id="alpha">Titre</button>
+        <!--div class="dropdown__filter" id="myDropdown">
+          <a class="dropdown--item first" href=""
+            >Popularité<span><i class="fa-solid fa-chevron-up arrow"></i></span
+          ></a>
+          <a class="dropdown--item second" href="#">Date</a>
+          <a class="dropdown--item" href="#"></a>
+        </div-->
+      </div>
+      <!--Lightbox part-->
+      <!-- Images used to open the lightbox -->
+      <div class="lightbox__wrapper">
+        <div class="row"></div>
+        <div class="lightbox" id="lightbox" role="dialog">
+          <span class="lightbox__close">&#10005;</span>
+          <div class="arrow arrow-left">
+            <i class="fa-solid fa-chevron-left"></i>
+          </div>
+          <div class="arrow arrow-right">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+
+          <img id="first-img" alt="img" />
+
+          <video
+            id="first-video"
+            alt="video"
+            type="video/mp4"
+            controls
+            width="400"
+          />
+        </div>
+      </div>
+      <p class="average"></p>
     </main>
     <div id="contact_modal">
-      <div class="modal">
+      <div class="modal" aria-hidden="false" role="dialog">
         <header>
-          <h2>Contactez-moi<br /><span></span></h2>
+          <h2>
+            Contactez-moi<br /><small
+              ><i class="fa-solid fa-chevron-down"></i
+            ></small>
+          </h2>
           <img src="assets/icons/close.svg" onclick="closeModal()" />
         </header>
         <form>
@@ -53,6 +103,7 @@
       </div>
     </div>
     <script src="scripts/factories/photographer.js"></script>
+    <script src="scripts/factories/media.js"></script>
     <script src="/scripts/pages/photographer.js"></script>
     <script src="/scripts/utils/contactForm.js"></script>
   </body>

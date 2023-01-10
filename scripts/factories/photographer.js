@@ -14,8 +14,8 @@ function photographerFactory(data) {
     img.setAttribute("src", picture);
     img.setAttribute("alt", `${portrait}`);
 
-    const h2 = document.createElement("h2");
-    h2.textContent = name;
+    const h1 = document.createElement("h1");
+    h1.textContent = name;
     const localisation = document.createElement("p");
     localisation.classList.add("localisation");
     localisation.textContent = city + ", " + country;
@@ -28,7 +28,7 @@ function photographerFactory(data) {
     // wrap img in link as its child
     article.appendChild(link);
     link.append(img);
-    article.appendChild(h2);
+    article.appendChild(h1);
     article.appendChild(localisation);
     article.appendChild(photographerTagline);
     article.appendChild(photographerPrice);

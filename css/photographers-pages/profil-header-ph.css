@@ -46,10 +46,9 @@
   margin: 0;
 }
 
-@media (min-width: 968px) {
+@media (min-width: 992px) {
   .photographer__profil {
     height: 300px;
-    margin: 50px 50px 100px;
     display: grid;
     grid-template-columns: 1FR 1FR 1FR;
     grid-template-areas: "info btn picture";
@@ -57,7 +56,17 @@
   }
 }
 
-@media (max-width: 967px) {
+@media (min-width: 769px) and (max-width: 991px) {
+  .photographer__profil {
+    display: grid;
+    height: 500px;
+    grid-template-columns: 1FR 1FR;
+    place-items: center;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 768px) {
   .photographer__profil {
     display: grid;
     height: 500px;

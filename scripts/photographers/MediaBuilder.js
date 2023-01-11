@@ -1,6 +1,6 @@
 "use strict";
 
-import GalleryFactory from "./factories/GalleryFactory.js";
+import GalleryFactory from "../factories/GalleryFactory.js";
 import LikeCounter from "./Likes.js";
 
 export default class MediaBuilder {

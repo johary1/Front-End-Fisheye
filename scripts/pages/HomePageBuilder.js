@@ -12,7 +12,7 @@ export default class HomePageBuilder {
       let articlePhotographers = document.createElement("article");
       articlePhotographers.className = "articlePh";
       let templatePhotographer = `
-            <a href="photographers.html?id=${photographe.id}" title="${photographe.name}">
+            <a href="photographer.html?id=${photographe.id}" title="${photographe.name}">
                 <img src="${photographe.portrait}" alt="${photographe.alt}">
                 <h2 class="name">${photographe.name}</h2>
             </a>

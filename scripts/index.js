@@ -1,7 +1,7 @@
 "use strict";
 
 // DATA
-import FishEyeApi from "./fetchData/FisheyeApi.js";
+import FishEyeApi from "./fetchData/FishEyeApi.js";
 
 // HOMEPAGE
 import HomePageBuilder from "./pages/HomePageBuilder.js";
@@ -15,7 +15,7 @@ import MediaBuilder from "./photographers/MediaBuilder.js";
   new FishEyeApi()
     .getDataFishEye()
     .then((data) => {
-      if (window.location.pathname.includes("/photographers.html")) {
+      if (window.location.pathname.includes("/photographer.html")) {
         // PHOTOGRAPHER PROFIL HEADER
         new PhotographerDescription().displayPhotographerProfil(data);
 

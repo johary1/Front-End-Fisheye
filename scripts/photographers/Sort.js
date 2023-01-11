@@ -1,6 +1,6 @@
 "use strict";
 
-import GalleryFactory from "../factories/GalleryFactory";
+import GalleryFactory from "../factories/GalleryFactory.js";
 
 export default class DropDownMenu {
   // Events, open/close the dropDownMenu

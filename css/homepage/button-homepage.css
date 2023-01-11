@@ -1,0 +1,36 @@
+/* BUTTON 'Revenir en haut de page' */
+.btn__up {
+  background: #db8876;
+  border-radius: 0.3125rem;
+  color: #000;
+  display: none;
+  flex-wrap: nowrap;
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  left: 0;
+  margin: 0 auto;
+  padding: 5px;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  text-decoration: none;
+  top: 85%;
+  width: 80px;
+  z-index: 1;
+}
+
+.fa-solid {
+  font-size: larger;
+  color: white;
+}
+
+.fa-solid:hover {
+  background: #901c1c;
+  transition: 0.3s ease;
+}
+
+.btn__up:hover {
+  background: #901c1c;
+  color: #fff;
+}

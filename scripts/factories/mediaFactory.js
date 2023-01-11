@@ -1,7 +1,7 @@
 "use strict";
 
-import ImageFactory from "./imageFactory.js";
-import VideoFactory from "./videoFactory.js";
+import ImageFactory from "./ImageFactory.js";
+import VideoFactory from "./VideoFactory.js";
 
 export default class MediaFactory {
   // Check if the selected item is an image or a video

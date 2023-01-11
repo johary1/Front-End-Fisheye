@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link rel="icon" type="image/png" href="assets/favicon.png" />
-    <link
-      href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <title>Fisheye</title>
+    <title>FishEye - Accueil</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/homepage.css" />
+    <script type="module" src="scripts/index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/fd61535574.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
+
   <body>
-    <header>
-      <img src="assets/images/logo.png" class="logo" alt="logo for website" />
-      <h1>Nos photographes</h1>
+    <!-- BANNER -->
+    <header role="banner">
+      <a href="index.html" title="HomePage"
+        ><img
+          src="https://res.cloudinary.com/dlpyn3wxf/image/upload/v1614078430/logo_mig5no.png"
+          alt="FishEye Home Page"
+      /></a>
+
+      <h1>Nos Photographes</h1>
     </header>
-    <main id="main">
-      <div class="photographer_section"></div>
+    <main>
+      <!-- BUTTON 'PASSER AU CONTENU' -->
+      <a class="btn__up" id="main-photographers-link" href="#photographers"
+        ><i class="fa-solid fa-circle-chevron-up"></i
+      ></a>
+      <!-- PHOTOGRAPHERS -->
+      <section id="photographers" aria-label="photographers"></section>
     </main>
-    <script src="scripts/factories/photographer.js"></script>
-    <script src="scripts/pages/index.js"></script>
   </body>
 </html>

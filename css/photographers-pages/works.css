@@ -1,0 +1,67 @@
+/* PH WORKS MEDIAS */
+@media (min-width: 968px) {
+  #ph-works {
+    display: grid;
+    grid-template-columns: 1FR 1FR 1FR;
+    place-items: center;
+    margin: 3rem 0;
+  }
+}
+
+@media (max-width: 967px) {
+  #ph-works {
+    display: grid;
+    grid-template-columns: 1FR;
+    place-items: center;
+    margin: 3rem 0;
+    gap: 30px;
+  }
+}
+
+.btn-like {
+  background: none;
+  border: none;
+  color: #901c1c;
+  font-size: 1.1rem;
+  margin-left: -0.3rem;
+}
+
+.ph-work-elt {
+  color: #901c1c;
+  font-size: 1.1em;
+  font-weight: 500;
+  margin: 0 0 0.625rem;
+  width: 20.9375rem;
+}
+
+.ph-work-elt .fa-heart:hover,
+.ph-work-elt img:hover,
+.ph-work-elt video:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+.ph-work-elt .ph-work-title {
+  width: 13rem;
+}
+
+.ph-work-elt img,
+.ph-work-elt video {
+  width: 350px;
+  height: 350px;
+  gap: 30px;
+  border-radius: 5px;
+  border: 0.5px solid #f1efef;
+}
+
+.ph-work-elt-text {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+}
+
+.ph-work-title {
+  font-size: 1em;
+  font-weight: 400;
+}

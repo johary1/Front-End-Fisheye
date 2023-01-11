@@ -1,0 +1,68 @@
+/* HEADER PH PROFIL */
+.photographer__city {
+  color: #901c1c;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+.photographer__infos h2 {
+  color: #d3573c;
+  font-size: 2.4em;
+  font-weight: 400;
+  margin: 0;
+}
+
+#ph-profil-header {
+  background-color: #fafafa;
+}
+
+.photographer__profil button {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  padding: 11px;
+  width: 170px;
+  height: 70px;
+  border: none;
+  background-color: #901c1c;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.photographer__profil button:hover {
+  background: #651414;
+  transform: scale(1.05);
+}
+
+.photographer__profil img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.photographer__tagline {
+  color: #525252;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+@media (min-width: 968px) {
+  .photographer__profil {
+    height: 300px;
+    margin: 50px 50px 100px;
+    display: grid;
+    grid-template-columns: 1FR 1FR 1FR;
+    grid-template-areas: "info btn picture";
+    place-items: center;
+  }
+}
+
+@media (max-width: 967px) {
+  .photographer__profil {
+    display: grid;
+    height: 500px;
+    grid-template-columns: 1FR;
+    place-items: center;
+    gap: 50px;
+  }
+}

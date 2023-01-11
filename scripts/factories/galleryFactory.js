@@ -1,7 +1,7 @@
 "use strict";
 
-import MediaFactory from "./mediaFactory.js";
-import Lightbox from "../photographers/LightBox.js";
+import MediaFactory from "./MediaFactory.js";
+import Lightbox from "../photographers/Lightbox.js";
 
 export default class GalleryFactory {
   constructor() {

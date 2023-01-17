@@ -10,9 +10,10 @@ export default class DropDownMenu {
     let hiddenSort = document.getElementsByClassName("hidden-sort");
 
     if (arrowOpen) {
-      arrowOpen[0].addEventListener("click", () => {
+      arrowOpen[0].addEventListener("click", (e) => {
         hiddenSort[0].style.display = "block";
       });
+
       this.sortMedias(data);
     }
     if (arrowClose) {
@@ -20,6 +21,12 @@ export default class DropDownMenu {
         hiddenSort[0].style.display = "none";
       });
     }
+    // hide list sort element when clicking outside
+    window.addEventListener("mouseup", (e) => {
+      if (e.target != arrowOpen && e.target.parentNode != arrowOpen) {
+        hiddenSort[0].style.display = "none";
+      }
+    });
   }
 
   // SORT MEDIAS (POPULARITY, DATA, TITLE)

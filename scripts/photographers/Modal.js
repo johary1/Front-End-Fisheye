@@ -8,7 +8,7 @@ export default class Modal {
 
     if (modalBtn) {
       modalBtn.addEventListener("click", this.launchModal);
-      //manage accessibility with aria-hitten attribute
+      //manage accessibility with aria-hidden attribute
       let main = document.getElementById("main");
       main.setAttribute("aria-hidden", "true");
       let modalbg = document.getElementById("form-dialog");
@@ -17,11 +17,18 @@ export default class Modal {
     }
     if (closeBtn) {
       closeBtn[0].addEventListener("click", this.closeModal);
-      //manage accessibility with aria-hitten attribute
+      //manage accessibility with aria-hidden attribute
       let main = document.getElementById("main");
       main.setAttribute("aria-hidden", "false");
       let modalbg = document.getElementById("form-dialog");
       modalbg.setAttribute("aria-hidden", "true");
+      // close form with escape
+
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          this.closeModal();
+        }
+      });
     }
   }
 

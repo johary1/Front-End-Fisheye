@@ -2,7 +2,9 @@
 
 import MediaFactory from "./MediaFactory.js";
 import Lightbox from "../photographers/Lightbox.js";
-
+/*A Factory Method creates new objects as instructed by the client. 
+One way to create objects in JavaScript is by invoking
+a constructor function with the new operator. */
 export default class GalleryFactory {
   constructor() {
     this.totalLike = 0;
@@ -10,6 +12,7 @@ export default class GalleryFactory {
 
   // build the gallery with the different medias and the lightbox
   builder(dataMedia) {
+    // get photographerId form url
     const id = window.location.search.split("id=")[1];
     let mediaFactory = new MediaFactory();
     let currentMedia = [];
@@ -38,7 +41,9 @@ export default class GalleryFactory {
         articlePhWork.innerHTML = workTemplate;
         sectionPhWorks.appendChild(articlePhWork);
         articlePhWork.classList.add("ph-work-elt");
+        // manage likes counter
         this.totalLike += parseInt(element.likes);
+        // manage change to current item for each slide
         currentMedia.push(mediaHTML.outerHTML);
         currentMediaName.push(element.photoName);
         new Lightbox().init(currentMedia, currentMediaName);

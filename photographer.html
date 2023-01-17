@@ -13,11 +13,16 @@
       href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
       integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
       crossorigin="anonymous"
+      SameSite="None"
     />
     <script type="module" src="./scripts/index.js"></script>
   </head>
 
   <body>
+    <!--loader-->
+    <div id="loader-block" class="loaderWrap">
+      <div class="loader"></div>
+    </div>
     <header role="banner">
       <a href="index.html" title="HomePage"
         ><img
@@ -32,17 +37,27 @@
       </header>
 
       <!-- DROPDOWN -->
-      <div class="works-sort">
-        <span id="sort-text">Trier par</span>
+      <div class="works-sort" style="display: inline-flex">
+        <div id="sort-text">Trier par</div>
         <div id="sort-wrapper">
-          <button class="sort-btn" aria-haspopup="listbox">Popularité</button>
-          <span
-            class="fas fa-chevron-down arrow-down-open"
-            role="button"
-          ></span>
-          <ul class="hidden-sort" role="listbox">
+          <button class="sort-btn" id="sort-btn" aria-haspopup="listbox">
+            Popularité
+            <span
+              class="fas fa-chevron-down arrow-down-open"
+              id="chevron"
+              role="button"
+            ></span>
+          </button>
+
+          <ul
+            class="hidden-sort"
+            id="hidden-sort"
+            role="listbox"
+            aria-hidden="true"
+          >
             <li class="sort" role="option">
-              Popularité <span class="fas fa-chevron-up arrow-up-close"></span>
+              Popularité
+              <span class="fas fa-chevron-up arrow-up-close"></span>
             </li>
             <li class="sort" role="option">Date</li>
             <li class="sort" role="option">Tître</li>

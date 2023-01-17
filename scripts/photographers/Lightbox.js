@@ -32,6 +32,7 @@ export default class Lightbox {
       currentMediaName
     );
     this.close();
+    //manage accessibility with keyboard to navigate in next or previous media
     this.keyboard(currentMedia, currentMediaName);
     return this;
   }
@@ -56,7 +57,7 @@ export default class Lightbox {
     });
   }
 
-  // turn to the next media
+  // return to the next media
   next(elt, media, name) {
     elt.addEventListener("click", () => {
       this.currentIndex += 1;
@@ -84,7 +85,7 @@ export default class Lightbox {
         lightbox.style.display = "none";
       });
   }
-
+  // accessibility for lightbox
   keyboard(currentMedia, currentMediaName) {
     document.addEventListener("keydown", (key) => {
       let lightBoxMedia = document.getElementById("works-lightbox-media");

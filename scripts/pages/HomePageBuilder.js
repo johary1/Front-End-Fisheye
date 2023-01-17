@@ -2,9 +2,12 @@
 
 import Scroll from "../utils/Scroll.js";
 
-// DISPLAY ALL PHOTOGRAPHERS BY DEFAULT
+// DISPLAY ALL PHOTOGRAPHERS BY DEFAULT LEANING ON BUILDER PATTERN
+/*The Builder pattern allows a client to construct a complex object
+ by specifying the type and content only. 
+ Construction details are hidden from the client entirely*/
 export default class HomePageBuilder {
-  // Build the photographers section, call the 'filtertags' function and the 'passer au contenu' button
+  // Build the photographers section and add scroll button to go back from top
   displayPhotographers(data) {
     let photographers = data.photographers;
     photographers.map((photographe) => {

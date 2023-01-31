@@ -12,7 +12,9 @@ export default class LikeCounter {
           ? []
           : e.target.classList.value.split(" ");
       //console.log(classListTarget);
-      // listen to click on heart-btn thanks to its class index
+      /*listen to click on heart-btn thanks to its class index
+      if class "heart-btn" exixts hasClassBtn is set to true else it is set to false
+      */
       let hasClassBtn = -1 != classListTarget.indexOf("heart-btn");
       //console.log(hasClassBtn);
       if (hasClassBtn) {

@@ -23,8 +23,9 @@ export default class GalleryFactory {
         let sectionPhWorks = document.getElementById("ph-works");
         let articlePhWork = document.createElement("article");
         let mediaHTML = mediaFactory.renderMedia(element);
+
         let workTemplate = `
-                <a href='#' title=${element.photoName}>
+                <a href="#" title=${element.photoName}>
                 ${mediaHTML.outerHTML}
                 </a>
                 <div class="ph-work-elt-text">
@@ -41,11 +42,14 @@ export default class GalleryFactory {
         articlePhWork.innerHTML = workTemplate;
         sectionPhWorks.appendChild(articlePhWork);
         articlePhWork.classList.add("ph-work-elt");
+
         // manage likes counter
         this.totalLike += parseInt(element.likes);
         // manage change to current item for each slide
         currentMedia.push(mediaHTML.outerHTML);
+
         currentMediaName.push(element.photoName);
+
         new Lightbox().init(currentMedia, currentMediaName);
       }
     });

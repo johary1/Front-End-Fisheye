@@ -8,6 +8,12 @@ export default class Modal {
 
     if (modalBtn) {
       modalBtn.addEventListener("click", this.launchModal);
+      // accessibility with keyboard to launch modal
+      modalBtn.addEventListener("keydown", (event) => {
+        if (event.code === "Enter" || event.code === "Space") {
+          this.launchModal();
+        }
+      });
       //manage accessibility with aria-hidden attribute
       let main = document.getElementById("main");
       main.setAttribute("aria-hidden", "true");

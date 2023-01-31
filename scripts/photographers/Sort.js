@@ -10,7 +10,7 @@ export default class DropDownMenu {
     let hiddenSort = document.getElementsByClassName("hidden-sort");
 
     if (arrowOpen) {
-      arrowOpen[0].addEventListener("click", (e) => {
+      arrowOpen[0].addEventListener("click", () => {
         hiddenSort[0].style.display = "block";
       });
 

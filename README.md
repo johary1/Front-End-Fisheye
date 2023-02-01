@@ -7,9 +7,14 @@ Rien à installer ici, il suffit d'ouvrir le fichier `index.html`.
 ## Objectifs du projet
 
 - Récupération des données avec la méthode Fetch
-- Création des pages index.html et photographer.html
-- Assurer l’accessibilité du site
-- Ecrire du code maintenable en utilisant des designs patterns
+- Amélioration des pages index.html et photographer.html avec les données récupéreés
+
+## Compétences évaluées
+
+- Gérer les évènements d'un site avec JavaScript
+- Assurer l'accessibilité d'un site web
+- Ecrire du code JavaScript maintenable
+- Développer une application web modulaire avec des design patterns
 
 ## Définition et usage du design pattern Factory sur le projet
 
@@ -39,5 +44,5 @@ Cette classe crée des éléments HTML video avec des attributs spécifiques sel
 
 ## Outils pour vérifier l'accessibilité
 
-[ACHECKER] (https://achecker.achecks.ca/checker/index.php)
-Plugin chrome : WAVE Evaluation Tool
+- [ACHECKER] (https://achecker.achecks.ca/checker/index.php)
+- Plugin chrome : WAVE Evaluation Tool

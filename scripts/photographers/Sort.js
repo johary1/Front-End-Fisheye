@@ -9,6 +9,8 @@ export default class DropDownMenu {
     let arrowClose = document.getElementsByClassName("arrow-up-close");
     let hiddenSort = document.getElementsByClassName("hidden-sort");
 
+    hiddenSort[0].style.display = "none";
+
     if (arrowOpen) {
       arrowOpen[0].addEventListener("click", () => {
         hiddenSort[0].style.display = "block";
@@ -21,9 +23,9 @@ export default class DropDownMenu {
         hiddenSort[0].style.display = "none";
       });
     }
-    // hide list sort element when clicking outside
+
     window.addEventListener("mouseup", (e) => {
-      if (e.target != arrowOpen && e.target.parentNode != arrowOpen) {
+      if (!e.target.matches(".sort-btn")) {
         hiddenSort[0].style.display = "none";
       }
     });
